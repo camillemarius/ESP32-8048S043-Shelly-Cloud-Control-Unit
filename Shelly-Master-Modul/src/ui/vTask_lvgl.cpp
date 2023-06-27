@@ -37,7 +37,9 @@ Arduino_RPi_DPI_RGBPanel *gfx = new Arduino_RPi_DPI_RGBPanel(
 #include "touch.h"
 
 vTask_lvgl::vTask_lvgl():
-  watchdog_sensor_data(false) {
+    watchdog_sensor_data(false),
+    screenWidth(0),
+    screenHeight(0){
 
 }
 
