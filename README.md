@@ -1,4 +1,4 @@
-# Smart_3DP_CNC_Enclosure#
+# Smart_3DP_CNC_Enclosure
 
 This GitHub repository houses an project that combines the power of the ESP32-8048S043 Display with the Shelly Cloud platform. The code in this repository allows for seamless interaction between the GUI interface of the ESP32-8048S043 Display and the Shelly Cloud, enabling dynamic control and monitoring of various devices and systems.
 
@@ -19,3 +19,4 @@ Device Control: With this code, users can send commands and control connected de
 Data Visualization: The GUI interface provides intuitive visualizations of device statuses, sensor readings, and other relevant data, allowing users to gain insights at a glance.
 
 Whether you're building a smart home automation system or developing an interactive IoT project, this repository offers a powerful framework for integrating the ESP32-8048S043 Display with the Shelly Cloud platform. The code provides a solid foundation for creating a seamless user experience and unlocking the full potential of your connected devices or systems.
+#
