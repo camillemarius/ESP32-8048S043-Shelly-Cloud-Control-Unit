@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "ui.h": "c"
+    },
+    "cmake.sourceDirectory": "C:/Users/Camille/Downloads/Sunton-ESP32-8048S043-main/Sunton-ESP32-8048S043-main/lib/Lvgl"
+}
