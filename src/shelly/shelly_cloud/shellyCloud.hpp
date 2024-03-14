@@ -7,6 +7,7 @@
 //#include <ESP8266HTTPClient.h>
 #include <HTTPClient.h>
 //#include <ArduinoJson.h>
+//#include <WiFiManager.h> // Include WiFiManager library
 
 #include "shellyCloud_config.hpp"
 
@@ -21,6 +22,7 @@ class shellyCloud {
         void handleResponse(HTTPClient& http);
 
     private:
+        //WiFiManager wifiManager;
         WiFiClientSecure client;
         HTTPClient http;
 

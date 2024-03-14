@@ -63,17 +63,20 @@ vTask_lvgl::vTask_lvgl():
 void vTask_lvgl::Run(void *p)
 {
     vTask_lvgl& r_this = GetInstance();
-
+    int next_timeout = 0;
     //r_this.init_relay();
     while (true)
     {
         if(r_this.takeLvglSemaphore() == pdTRUE) {
-          lv_timer_handler();
+           next_timeout= lv_timer_handler();
           //r_this.read_from_receive_queue();
           //r_this.check_watchdog_sensor_data();
+          vTaskDelay(next_timeout / portTICK_PERIOD_MS);
           r_this.giveLvglSemaphore();
+        } else {
+          vTaskDelay(500 / portTICK_PERIOD_MS);
         }
-        vTaskDelay(100 / portTICK_PERIOD_MS);
+
 
         
         
@@ -86,7 +89,7 @@ void vTask_lvgl::Run(void *p)
 
 void vTask_lvgl::createTask(int priority)
 {
-    xTaskCreate(this->Run, "lvglTask", 16000, NULL, priority, &lvglTask);
+    xTaskCreate(this->Run, "lvglTask", 30000, NULL, priority, &lvglTask);
 }
 
 bool vTask_lvgl::takeLvglSemaphore()

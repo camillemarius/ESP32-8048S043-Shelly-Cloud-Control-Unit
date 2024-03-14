@@ -11,10 +11,10 @@ class MessageQueueHolder {
         static bool receive_gui(Message& message, TickType_t timeout);
         static bool send_cmd(const Message& message, TickType_t timeout);
         static bool receive_cmd(Message& message, TickType_t timeout);
-        static bool send_sd_save(const SD_Message& message, TickType_t timeout);
-        static bool receive_sd_save(SD_Message& message, TickType_t timeout);
-        static bool send_sd_read(const SD_Message& message, TickType_t timeout);
-        static bool receive_sd_read(SD_Message& message, TickType_t timeout);
+        //static bool send_sd_save(const SD_Message& message, TickType_t timeout);
+        //static bool receive_sd_save(SD_Message& message, TickType_t timeout);
+        //static bool send_sd_read(const SD_Message& message, TickType_t timeout);
+        //static bool receive_sd_read(SD_Message& message, TickType_t timeout);
 
     private:
         MessageQueueHolder();

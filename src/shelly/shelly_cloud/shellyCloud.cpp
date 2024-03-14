@@ -6,9 +6,9 @@ shellyCloud::shellyCloud() {
 }
 
 void shellyCloud::init() {
-  //WiFi.begin(ssid, password);
   WiFi.begin(ssid, password);
-
+  //wifiManager.autoConnect("ShellyCloudAP");
+  //Serial.println("WiFi connected");
   // With the modified line
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);

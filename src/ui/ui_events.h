@@ -12,10 +12,8 @@ extern "C" {
 
 void event_switch_power_chatcnc(lv_event_t * e);
 void event_switch_power_xiaomi(lv_event_t * e);
-void event_slider_brightness_chatcnc(lv_event_t * e);
 void event_switch_power_light_chatcnc(lv_event_t * e);
 void event_switch_power_ender(lv_event_t * e);
-void event_slider_brightness_ender(lv_event_t * e);
 void event_switch_power_light_ender(lv_event_t * e);
 
 #ifdef __cplusplus

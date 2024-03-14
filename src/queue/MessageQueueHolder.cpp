@@ -26,7 +26,7 @@ bool MessageQueueHolder::receive_cmd(Message& message, TickType_t timeout) {
     return instance().queue_cmd.receive(message, timeout);
 }
 
-bool MessageQueueHolder::send_sd_save(const SD_Message& message, TickType_t timeout) {
+/*bool MessageQueueHolder::send_sd_save(const SD_Message& message, TickType_t timeout) {
     return instance().queue_sd_save.send(message, timeout);
 }
 
@@ -41,5 +41,5 @@ bool MessageQueueHolder::send_sd_read(const SD_Message& message, TickType_t time
 
 bool MessageQueueHolder::receive_sd_read(SD_Message& message, TickType_t timeout) {
     return instance().queue_sd_read.receive(message, timeout);
-}
+}*/
 

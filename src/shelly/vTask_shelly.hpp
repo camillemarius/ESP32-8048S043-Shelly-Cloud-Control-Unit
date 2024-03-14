@@ -19,7 +19,7 @@ class vTask_shelly {
         static void Run(void *p);
 
     private:
-        void shelly_task_init(const int priority);
+        void createTask(const int priority);
         void read_from_msgq(); 
         bool takeShellySemaphore();
         bool giveShellySemaphore();

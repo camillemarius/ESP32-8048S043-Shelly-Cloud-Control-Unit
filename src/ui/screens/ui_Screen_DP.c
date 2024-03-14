@@ -70,16 +70,24 @@ void ui_Screen_DP_screen_init(void)
     lv_obj_clear_flag(ui_Image5, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
     lv_img_set_zoom(ui_Image5, 200);
 
-    ui_image_Status = lv_img_create(ui_Panel13);
-    lv_img_set_src(ui_image_Status, &ui_img_581727398);
-    lv_obj_set_width(ui_image_Status, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_image_Status, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_image_Status, -87);
-    lv_obj_set_y(ui_image_Status, 141);
-    lv_obj_set_align(ui_image_Status, LV_ALIGN_CENTER);
-    lv_obj_add_flag(ui_image_Status, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
-    lv_obj_clear_flag(ui_image_Status, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
-    lv_img_set_zoom(ui_image_Status, 150);
+    ui_Label_Leistung = lv_label_create(ui_Panel13);
+    lv_obj_set_width(ui_Label_Leistung, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_Label_Leistung, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_Label_Leistung, 79);
+    lv_obj_set_y(ui_Label_Leistung, 37);
+    lv_label_set_text(ui_Label_Leistung, "625W");
+    lv_obj_set_style_text_font(ui_Label_Leistung, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+
+    ui_image_Status6 = lv_img_create(ui_Panel13);
+    lv_img_set_src(ui_image_Status6, &ui_img_581727398);
+    lv_obj_set_width(ui_image_Status6, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_image_Status6, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_image_Status6, -87);
+    lv_obj_set_y(ui_image_Status6, 141);
+    lv_obj_set_align(ui_image_Status6, LV_ALIGN_CENTER);
+    lv_obj_add_flag(ui_image_Status6, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
+    lv_obj_clear_flag(ui_image_Status6, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_img_set_zoom(ui_image_Status6, 150);
 
     ui_Label4 = lv_label_create(ui_Panel13);
     lv_obj_set_width(ui_Label4, LV_SIZE_CONTENT);   /// 1
@@ -102,6 +110,14 @@ void ui_Screen_DP_screen_init(void)
     lv_obj_set_style_outline_width(ui_Panel1, 2, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_outline_pad(ui_Panel1, 2, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_Panel1, &lv_font_montserrat_18, LV_PART_MAIN | LV_STATE_DEFAULT);
+
+    ui_Label_Leistung1 = lv_label_create(ui_Panel1);
+    lv_obj_set_width(ui_Label_Leistung1, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_Label_Leistung1, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_Label_Leistung1, 79);
+    lv_obj_set_y(ui_Label_Leistung1, 37);
+    lv_label_set_text(ui_Label_Leistung1, "1250W");
+    lv_obj_set_style_text_font(ui_Label_Leistung1, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Label2 = lv_label_create(ui_Panel1);
     lv_obj_set_width(ui_Label2, LV_SIZE_CONTENT);   /// 1
@@ -226,6 +242,14 @@ void ui_Screen_DP_screen_init(void)
     lv_label_set_text(ui_Label7, "Offline");
     lv_obj_set_style_text_font(ui_Label7, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
+    ui_Label_Leistung3 = lv_label_create(ui_Panel9);
+    lv_obj_set_width(ui_Label_Leistung3, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_Label_Leistung3, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_Label_Leistung3, 79);
+    lv_obj_set_y(ui_Label_Leistung3, 37);
+    lv_label_set_text(ui_Label_Leistung3, "33W");
+    lv_obj_set_style_text_font(ui_Label_Leistung3, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+
     ui_Panel14 = lv_obj_create(ui_Panel4);
     lv_obj_set_width(ui_Panel14, 250);
     lv_obj_set_height(ui_Panel14, 440);
@@ -239,6 +263,14 @@ void ui_Screen_DP_screen_init(void)
     lv_obj_set_style_outline_pad(ui_Panel14, 2, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_Panel14, &lv_font_montserrat_18, LV_PART_MAIN | LV_STATE_DEFAULT);
 
+    ui_Label_Leistung4 = lv_label_create(ui_Panel14);
+    lv_obj_set_width(ui_Label_Leistung4, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_Label_Leistung4, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_Label_Leistung4, 90);
+    lv_obj_set_y(ui_Label_Leistung4, 37);
+    lv_label_set_text(ui_Label_Leistung4, "5W");
+    lv_obj_set_style_text_font(ui_Label_Leistung4, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+
     ui_Label19 = lv_label_create(ui_Panel14);
     lv_obj_set_width(ui_Label19, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_Label19, LV_SIZE_CONTENT);    /// 1
@@ -246,17 +278,6 @@ void ui_Screen_DP_screen_init(void)
     lv_obj_set_y(ui_Label19, 113);
     lv_obj_set_align(ui_Label19, LV_ALIGN_CENTER);
     lv_label_set_text(ui_Label19, "Power");
-
-    ui_Slider_Brightness_Light_Chatcnc = lv_slider_create(ui_Panel14);
-    lv_slider_set_value(ui_Slider_Brightness_Light_Chatcnc, 100, LV_ANIM_OFF);
-    if(lv_slider_get_mode(ui_Slider_Brightness_Light_Chatcnc) == LV_SLIDER_MODE_RANGE) lv_slider_set_left_value(
-            ui_Slider_Brightness_Light_Chatcnc, 0, LV_ANIM_OFF);
-    lv_obj_set_width(ui_Slider_Brightness_Light_Chatcnc, 200);
-    lv_obj_set_height(ui_Slider_Brightness_Light_Chatcnc, 10);
-    lv_obj_set_x(ui_Slider_Brightness_Light_Chatcnc, 0);
-    lv_obj_set_y(ui_Slider_Brightness_Light_Chatcnc, 190);
-    lv_obj_set_align(ui_Slider_Brightness_Light_Chatcnc, LV_ALIGN_CENTER);
-    lv_obj_add_flag(ui_Slider_Brightness_Light_Chatcnc, LV_OBJ_FLAG_HIDDEN);     /// Flags
 
     ui_Switch_Power_Light_Chatcnc = lv_switch_create(ui_Panel14);
     lv_obj_set_width(ui_Switch_Power_Light_Chatcnc, 50);
@@ -273,16 +294,6 @@ void ui_Screen_DP_screen_init(void)
     lv_obj_set_y(ui_Label20, -180);
     lv_obj_set_align(ui_Label20, LV_ALIGN_CENTER);
     lv_label_set_text(ui_Label20, "Licht");
-
-    ui_Label21 = lv_label_create(ui_Panel14);
-    lv_obj_set_width(ui_Label21, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_Label21, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_Label21, -62);
-    lv_obj_set_y(ui_Label21, 160);
-    lv_obj_set_align(ui_Label21, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_Label21, "Helligkeit");
-    lv_obj_add_flag(ui_Label21, LV_OBJ_FLAG_HIDDEN);     /// Flags
-    lv_obj_set_style_text_font(ui_Label21, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Image6 = lv_img_create(ui_Panel14);
     lv_img_set_src(ui_Image6, &ui_img_1822783234);
@@ -327,6 +338,14 @@ void ui_Screen_DP_screen_init(void)
     lv_obj_set_style_outline_width(ui_Panel11, 2, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_outline_pad(ui_Panel11, 2, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_Panel11, &lv_font_montserrat_18, LV_PART_MAIN | LV_STATE_DEFAULT);
+
+    ui_Label_Leistung5 = lv_label_create(ui_Panel11);
+    lv_obj_set_width(ui_Label_Leistung5, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_Label_Leistung5, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_Label_Leistung5, 79);
+    lv_obj_set_y(ui_Label_Leistung5, 37);
+    lv_label_set_text(ui_Label_Leistung5, "120W");
+    lv_obj_set_style_text_font(ui_Label_Leistung5, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Label13 = lv_label_create(ui_Panel11);
     lv_obj_set_width(ui_Label13, LV_SIZE_CONTENT);   /// 1
@@ -396,6 +415,14 @@ void ui_Screen_DP_screen_init(void)
     lv_obj_set_style_outline_pad(ui_Panel3, 2, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_Panel3, &lv_font_montserrat_18, LV_PART_MAIN | LV_STATE_DEFAULT);
 
+    ui_Label_Leistung2 = lv_label_create(ui_Panel3);
+    lv_obj_set_width(ui_Label_Leistung2, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_Label_Leistung2, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_Label_Leistung2, 90);
+    lv_obj_set_y(ui_Label_Leistung2, 37);
+    lv_label_set_text(ui_Label_Leistung2, "5W");
+    lv_obj_set_style_text_font(ui_Label_Leistung2, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+
     ui_Label1 = lv_label_create(ui_Panel3);
     lv_obj_set_width(ui_Label1, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_Label1, LV_SIZE_CONTENT);    /// 1
@@ -403,17 +430,6 @@ void ui_Screen_DP_screen_init(void)
     lv_obj_set_y(ui_Label1, 120);
     lv_obj_set_align(ui_Label1, LV_ALIGN_CENTER);
     lv_label_set_text(ui_Label1, "Power");
-
-    ui_Slider_Brightness_Light_Ender = lv_slider_create(ui_Panel3);
-    lv_slider_set_value(ui_Slider_Brightness_Light_Ender, 100, LV_ANIM_OFF);
-    if(lv_slider_get_mode(ui_Slider_Brightness_Light_Ender) == LV_SLIDER_MODE_RANGE) lv_slider_set_left_value(
-            ui_Slider_Brightness_Light_Ender, 0, LV_ANIM_OFF);
-    lv_obj_set_width(ui_Slider_Brightness_Light_Ender, 200);
-    lv_obj_set_height(ui_Slider_Brightness_Light_Ender, 10);
-    lv_obj_set_x(ui_Slider_Brightness_Light_Ender, 0);
-    lv_obj_set_y(ui_Slider_Brightness_Light_Ender, 185);
-    lv_obj_set_align(ui_Slider_Brightness_Light_Ender, LV_ALIGN_CENTER);
-    lv_obj_add_flag(ui_Slider_Brightness_Light_Ender, LV_OBJ_FLAG_HIDDEN);     /// Flags
 
     ui_Switch_Power_Light_Ender = lv_switch_create(ui_Panel3);
     lv_obj_set_width(ui_Switch_Power_Light_Ender, 50);
@@ -430,16 +446,6 @@ void ui_Screen_DP_screen_init(void)
     lv_obj_set_y(ui_Label5, -180);
     lv_obj_set_align(ui_Label5, LV_ALIGN_CENTER);
     lv_label_set_text(ui_Label5, "Licht");
-
-    ui_Label15 = lv_label_create(ui_Panel3);
-    lv_obj_set_width(ui_Label15, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_Label15, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_Label15, -62);
-    lv_obj_set_y(ui_Label15, 150);
-    lv_obj_set_align(ui_Label15, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_Label15, "Helligkeit");
-    lv_obj_add_flag(ui_Label15, LV_OBJ_FLAG_HIDDEN);     /// Flags
-    lv_obj_set_style_text_font(ui_Label15, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Image2 = lv_img_create(ui_Panel3);
     lv_img_set_src(ui_Image2, &ui_img_1822783234);
@@ -475,10 +481,8 @@ void ui_Screen_DP_screen_init(void)
     lv_obj_add_event_cb(ui_Switch_Power_Chatcnc, ui_event_Switch_Power_Chatcnc, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_Switch_Power_Xiaomi1, ui_event_Switch_Power_Xiaomi1, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_Switch_Power_Xiaomi, ui_event_Switch_Power_Xiaomi, LV_EVENT_ALL, NULL);
-    lv_obj_add_event_cb(ui_Slider_Brightness_Light_Chatcnc, ui_event_Slider_Brightness_Light_Chatcnc, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_Switch_Power_Light_Chatcnc, ui_event_Switch_Power_Light_Chatcnc, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_Switch_Power_Ender, ui_event_Switch_Power_Ender, LV_EVENT_ALL, NULL);
-    lv_obj_add_event_cb(ui_Slider_Brightness_Light_Ender, ui_event_Slider_Brightness_Light_Ender, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_Switch_Power_Light_Ender, ui_event_Switch_Power_Light_Ender, LV_EVENT_ALL, NULL);
 
 }

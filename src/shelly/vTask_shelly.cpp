@@ -8,8 +8,10 @@ vTask_shelly& vTask_shelly::GetInstance(void){
 
 void vTask_shelly::CreateResources(int priority) {
     vTask_shelly& r_this = vTask_shelly::GetInstance();
-    r_this.shelly_task_init(priority);
+
+    r_this.shellySemaphore = xSemaphoreCreateBinary();
     (void) r_this.giveShellySemaphore();
+    r_this.createTask(priority);
 }
 
 vTask_shelly::vTask_shelly() {
@@ -40,9 +42,9 @@ bool vTask_shelly::giveShellySemaphore()
 void vTask_shelly::Run(void *p)
 {   
     vTask_shelly& r_this = GetInstance();
-    delay(1000);
+    vTaskDelay(2000 / portTICK_PERIOD_MS);
     
-    //lv_label_set_text(ui_Label16, "Try to init");
+    //lv_label_set_text(ui_Label17, "Try to init");
     r_this.controlcabinet.init();
     //r_this.controlcabinet.ctr_cnc.setRelay(0,true);
     //delay(1000);
@@ -56,19 +58,19 @@ void vTask_shelly::Run(void *p)
     // TO DELETE
     //char str_value[10];
     //sprintf(str_value, "%d", "Sucess to read");
-    //lv_label_set_text(ui_Label16, "Connected to cloud");
+    //lv_label_set_text(ui_Label17, "Connected to cloud");
 
     while (true)
     {
         
         if(r_this.takeShellySemaphore() == pdTRUE) {
             //r_this.read_from_msgq();
-            //lv_label_set_text(ui_Label16, "Turn on");
-            r_this.controlcabinet.ctr_3dp.setRelay(0,true);
-            vTaskDelay(1000 / portTICK_PERIOD_MS);
-            //lv_label_set_text(ui_Label16, "Turn off");
-            r_this.controlcabinet.ctr_3dp.setRelay(0,false);
-            vTaskDelay(1000 / portTICK_PERIOD_MS);
+            //lv_label_set_text(ui_Label17, "Turn on");
+            r_this.controlcabinet.ctr_3dp.setRelay(1,true);
+            vTaskDelay(500 / portTICK_PERIOD_MS);
+            //lv_label_set_text(ui_Label17, "Turn off");
+            r_this.controlcabinet.ctr_3dp.setRelay(1,false);
+            vTaskDelay(500 / portTICK_PERIOD_MS);
             
             //UBaseType_t stackWatermark = uxTaskGetStackHighWaterMark(NULL);
             //char str_value[10];
@@ -78,13 +80,12 @@ void vTask_shelly::Run(void *p)
         } else {
             //lv_label_set_text(ui_Label34, "faster");
         }
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        //vTaskDelay(1000 / portTICK_PERIOD_MS);
 
-    }
+        }
 }
 
-void vTask_shelly::shelly_task_init(const int priority)
+void vTask_shelly::createTask(const int priority)
 {
-    shellySemaphore = xSemaphoreCreateBinary();
-    xTaskCreate(this->Run, "shelly-Task", 15000, NULL, priority, &shelly_Task);
+    xTaskCreate(this->Run, "shelly-Task", 50000, NULL, priority, &shelly_Task);
 }

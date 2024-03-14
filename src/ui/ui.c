@@ -18,9 +18,11 @@ void ui_event_Switch_Power_Chatcnc(lv_event_t * e);
 lv_obj_t * ui_Switch_Power_Chatcnc;
 lv_obj_t * ui_Label18;
 lv_obj_t * ui_Image5;
-lv_obj_t * ui_image_Status;
+lv_obj_t * ui_Label_Leistung;
+lv_obj_t * ui_image_Status6;
 lv_obj_t * ui_Label4;
 lv_obj_t * ui_Panel1;
+lv_obj_t * ui_Label_Leistung1;
 lv_obj_t * ui_Label2;
 void ui_event_Switch_Power_Xiaomi1(lv_event_t * e);
 lv_obj_t * ui_Switch_Power_Xiaomi1;
@@ -36,18 +38,18 @@ lv_obj_t * ui_Label11;
 lv_obj_t * ui_Image4;
 lv_obj_t * ui_image_Status2;
 lv_obj_t * ui_Label7;
+lv_obj_t * ui_Label_Leistung3;
 lv_obj_t * ui_Panel14;
+lv_obj_t * ui_Label_Leistung4;
 lv_obj_t * ui_Label19;
-void ui_event_Slider_Brightness_Light_Chatcnc(lv_event_t * e);
-lv_obj_t * ui_Slider_Brightness_Light_Chatcnc;
 void ui_event_Switch_Power_Light_Chatcnc(lv_event_t * e);
 lv_obj_t * ui_Switch_Power_Light_Chatcnc;
 lv_obj_t * ui_Label20;
-lv_obj_t * ui_Label21;
 lv_obj_t * ui_Image6;
 lv_obj_t * ui_image_Status3;
 lv_obj_t * ui_Label8;
 lv_obj_t * ui_Panel11;
+lv_obj_t * ui_Label_Leistung5;
 lv_obj_t * ui_Label13;
 void ui_event_Switch_Power_Ender(lv_event_t * e);
 lv_obj_t * ui_Switch_Power_Ender;
@@ -56,13 +58,11 @@ lv_obj_t * ui_Image3;
 lv_obj_t * ui_image_Status4;
 lv_obj_t * ui_Label9;
 lv_obj_t * ui_Panel3;
+lv_obj_t * ui_Label_Leistung2;
 lv_obj_t * ui_Label1;
-void ui_event_Slider_Brightness_Light_Ender(lv_event_t * e);
-lv_obj_t * ui_Slider_Brightness_Light_Ender;
 void ui_event_Switch_Power_Light_Ender(lv_event_t * e);
 lv_obj_t * ui_Switch_Power_Light_Ender;
 lv_obj_t * ui_Label5;
-lv_obj_t * ui_Label15;
 lv_obj_t * ui_Image2;
 lv_obj_t * ui_image_Status5;
 lv_obj_t * ui_Label12;
@@ -103,14 +103,6 @@ void ui_event_Switch_Power_Xiaomi(lv_event_t * e)
         event_switch_power_xiaomi(e);
     }
 }
-void ui_event_Slider_Brightness_Light_Chatcnc(lv_event_t * e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-    lv_obj_t * target = lv_event_get_target(e);
-    if(event_code == LV_EVENT_VALUE_CHANGED) {
-        event_slider_brightness_chatcnc(e);
-    }
-}
 void ui_event_Switch_Power_Light_Chatcnc(lv_event_t * e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -125,14 +117,6 @@ void ui_event_Switch_Power_Ender(lv_event_t * e)
     lv_obj_t * target = lv_event_get_target(e);
     if(event_code == LV_EVENT_VALUE_CHANGED) {
         event_switch_power_ender(e);
-    }
-}
-void ui_event_Slider_Brightness_Light_Ender(lv_event_t * e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-    lv_obj_t * target = lv_event_get_target(e);
-    if(event_code == LV_EVENT_VALUE_CHANGED) {
-        event_slider_brightness_ender(e);
     }
 }
 void ui_event_Switch_Power_Light_Ender(lv_event_t * e)
