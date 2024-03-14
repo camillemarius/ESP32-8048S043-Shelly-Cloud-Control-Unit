@@ -1,10 +1,6 @@
 # Sunton-ESP32-8048S043
 First test with Sunton ESP32-8048S043 + Squareline UI + LVGL + Arduino GFX
 
+This GitHub repository houses an project that combines the power of the ESP32-8048S043 Display with the Shelly Cloud platform. The code in this repository allows for seamless interaction between the GUI interface of the ESP32-8048S043 Display and the Shelly Cloud, enabling dynamic control and monitoring of various devices and systems.
 
-
-Load this project in VSCode, compile and upload to Sunton ESP32-8048S043 board. Should display a simple UI with 2 Screens that you can go forth and back.
-
-
-![IMG_2007](https://github.com/pixelwave/Sunton-ESP32-8048S043/assets/19491804/7dd1ba92-e608-400d-a469-d33ac426347c)
-![IMG_2006](https://github.com/pixelwave/Sunton-ESP32-8048S043/assets/19491804/acaf3e1c-4d0a-4dd6-b631-58e0f4bcfeb1)
+<img width="1000" alt="ControlUnit" src="https://github.com/camillemarius/ESP32-8048S043-Shelly-Cloud-Control-Unit/assets/80516447/64d294ba-41e0-45f3-ae6d-7667f79aba79">
